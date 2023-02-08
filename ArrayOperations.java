@@ -116,6 +116,24 @@ public class ArrayOperations {
         }
         return differences;
     }
+    //in case they want this method to return array type
+    /*public static double[] displayDiffFromAverage(int[] array){
+        double sum=0;
+        for(int i=0; i<array.length; i++)
+        {
+            sum+=array[i];
+        }
+        double average=sum/array.length;
+        double[] result = new double[array.length];
+        for(int i = 0; i < result.length; i++)
+        {
+            result[i] = array[i] - average;
+        }
+
+        return result;
+
+    }
+    */
    
 }
 
