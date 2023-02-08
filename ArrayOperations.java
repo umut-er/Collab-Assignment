@@ -2,6 +2,15 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * A class that creates an array of given size with elements randomly chosen between 0 and 100 (both inclusive)
+ * and does some cool stuff with them.
+ * 
+ * @author Can KÜTÜKOĞLU
+ * @author Eray İŞÇİ
+ * @author Kemal Onur Özkan
+ * @author Umut Utku ERŞAHİNCE
+ */
 public class ArrayOperations {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -61,6 +70,12 @@ public class ArrayOperations {
        
         in.close();
     }
+
+    /**
+     * Given an array of integers, return the minimum.
+     * @param theArray the array used
+     * @return an integer, the minimum in the given array
+     */
     public static int minNumberFinder(int[] theArray){
         int min = Integer.MAX_VALUE;
         for(int n = 0;n < theArray.length;n++){
@@ -70,6 +85,12 @@ public class ArrayOperations {
         }
         return min;
     }
+
+    /**
+     * Given an array of integers, return the maximum.
+     * @param theArray the array used
+     * @return an integer, the maximum in the given array
+     */
     public static int maxNumberFinder(int[] theArray){
         int max = Integer.MIN_VALUE;
         for(int n = 0;n < theArray.length;n++){
@@ -79,6 +100,12 @@ public class ArrayOperations {
         }
         return max;
     }
+
+    /**
+     * Given an array of integers, return the sum of elements in the odd indexes.
+     * @param myArr the array used
+     * @return an integer, the sum of odd-indexed elements
+     */
     public static int oddSum(int[] myArr){
         int sum = 0;
         for(int i = 1; i < myArr.length; i+=2)
@@ -87,6 +114,12 @@ public class ArrayOperations {
         }    
         return sum;
     }
+
+    /**
+     * Given an array of integers, return the sum of elements in the even indexes.
+     * @param myArr the array used
+     * @return an integer, the sum of even-indexed elements
+     */
     public static int evenSum(int[] myArr){
         int sum = 0;
         for(int i = 0; i < myArr.length; i+=2)
@@ -95,6 +128,12 @@ public class ArrayOperations {
         }    
         return sum;
     }
+
+    /**
+     * Given an array of integers, return the string representation of a new array where new_array[i] = average - array[i]
+     * @param array the array used
+     * @return a string representing a new array where new_array[i] = average - array[i]
+     */
     public static String displayDiffFromAverage(int[] array){
         double sum=0;
         for(int i=0; i<array.length; i++)
@@ -116,6 +155,7 @@ public class ArrayOperations {
         }
         return differences;
     }
+
     //in case they want this method to return array type
     /*public static double[] displayDiffFromAverage(int[] array){
         double sum=0;
@@ -134,6 +174,5 @@ public class ArrayOperations {
 
     }
     */
-   
 }
 
