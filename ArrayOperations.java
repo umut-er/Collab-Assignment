@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayOperations {
@@ -6,49 +7,59 @@ public class ArrayOperations {
         Scanner in = new Scanner(System.in);
         Random rand = new Random();
 
+        System.out.print("Input the number of elements in the array: ");
         int n = in.nextInt();
+        System.out.println();
         int[] array = new int[n];
         for(int i = 0; i < n; i++){
             array[i] = rand.nextInt(0, 101);
         }
+        System.out.println("The array: " + Arrays.toString(array) + "\n");
+
+
         boolean keepAsking = true;
         while(keepAsking)
         {
-            System.out.println("Press 1 if you want to find the minimum of the array");
-            System.out.println("Press 2 if you want to find the maximum of the array");
-            System.out.println("Press 3 if you want to display the difference of the average and each of the elements in the array");
-            System.out.println("Press 4 if you want to find the sum of the odd indexed numbers");
-            System.out.println("Press 5 if you want to find the sum of the even indexed numbers");
-            System.out.println("Press 6 if you want to quit");
+            System.out.println("--------------------------  Options  --------------------------");
+            System.out.println("1 - display minimum of the array");
+            System.out.println("2 - display maximum of the array");
+            System.out.println("3 - display the difference between the average and the elements");
+            System.out.println("4 - display the sum of the odd indexed items");
+            System.out.println("5 - display the sum of the even indexed items");
+            System.out.println("6 - quit");
+            System.out.println("---------------------------------------------------------------");
+            System.out.print("Input: ");
             int choice = in.nextInt();
             in.nextLine();
+            System.out.println();
             if(choice == 1)
             {
-                System.out.println(minNumberFinder(array));
+                System.out.println("Minimum element in the array is: " + minNumberFinder(array));
             }
             else if(choice == 2)
             {
-                System.out.println(maxNumberFinder(array));
+                System.out.println("Maximum element in the array is: " + maxNumberFinder(array));
             }
             else if(choice == 3)
             {
-                System.out.println(displayDiffFromAverage(array));
+                System.out.println("The array containing the difference between the element and the average:\n" + displayDiffFromAverage(array));
             }
             else if(choice == 4)
             {
-                System.out.println(oddSum(array));
+                System.out.println("The sum of elements of odd index: " + oddSum(array));
             }
             else if(choice == 5)
             {
-                System.out.println(evenSum(array));
+                System.out.println("The sum of elements of even index: " + evenSum(array));
             }
             else if(choice == 6)
             {
                 keepAsking = false;
             }
+            System.out.println();
         }
        
-           in.close();
+        in.close();
     }
     public static int minNumberFinder(int[] theArray){
         int min = Integer.MAX_VALUE;
