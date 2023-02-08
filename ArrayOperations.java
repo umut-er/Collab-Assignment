@@ -14,4 +14,23 @@ public class ArrayOperations {
 
         in.close();
     }
+    public static int minNumberFinder(int[] theArray){
+        int min = Integer.MAX_VALUE;
+        for(int n = 0;n < theArray.length;n++){
+            if(theArray[n] < min){
+                min = theArray[n];
+            }
+        }
+        return min;
+    }
+    public static int maxNumberFinder(int[] theArray){
+        int max = Integer.MIN_VALUE;
+        for(int n = 0;n < theArray.length;n++){
+            if(theArray[n] > min){
+                max = theArray[n];
+            }
+        }
+        return max;
+    }
+   
 }
