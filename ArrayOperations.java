@@ -26,7 +26,7 @@ public class ArrayOperations {
     public static int maxNumberFinder(int[] theArray){
         int max = Integer.MIN_VALUE;
         for(int n = 0;n < theArray.length;n++){
-            if(theArray[n] > min){
+            if(theArray[n] > max){
                 max = theArray[n];
             }
         }
