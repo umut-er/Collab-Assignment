@@ -32,7 +32,7 @@ public class ArrayOperations {
             }
             else if(choice == 3)
             {
-                //method gelcek buraya System.outprintln()
+                System.out.println(displayDiffFromAverage(array));
             }
             else if(choice == 4)
             {
@@ -83,6 +83,27 @@ public class ArrayOperations {
             sum += myArr[i];
         }    
         return sum;
+    }
+    public static String displayDiffFromAverage(int[] array){
+        double sum=0;
+        for(int i=0; i<array.length; i++)
+        {
+            sum+=array[i];
+        }
+        double average=sum/array.length;
+        String differences="";
+        for(int i=0; i<array.length; i++)
+        {
+            if(i==array.length-1)
+            {
+                differences+=array[i]-average;
+            }
+            else
+            {
+                differences+=(array[i]-average)+", ";
+            }
+        }
+        return differences;
     }
    
 }
