@@ -17,8 +17,9 @@ public class ArrayOperations {
             System.out.println("Press 1 if you want to find the minimum of the array");
             System.out.println("Press 2 if you want to find the maximum of the array");
             System.out.println("Press 3 if you want to display the difference of the average and each of the elements in the array");
-            System.out.println("Press 4 if you want to find the sum of odd indexed and the even indexed numbers");
-            System.out.println("Press 5 if you want to quit");
+            System.out.println("Press 4 if you want to find the sum of the odd indexed numbers");
+            System.out.println("Press 5 if you want to find the sum of the even indexed numbers");
+            System.out.println("Press 6 if you want to quit");
             int choice = in.nextInt();
             in.nextLine();
             if(choice == 1)
@@ -35,9 +36,13 @@ public class ArrayOperations {
             }
             else if(choice == 4)
             {
-                //aynı şekilde
+                System.out.println(oddSum(array));
             }
-            else
+            else if(choice == 5)
+            {
+                System.out.println(evenSum(array));
+            }
+            else if(choice == 6)
             {
                 keepAsking = false;
             }
@@ -62,6 +67,22 @@ public class ArrayOperations {
             }
         }
         return max;
+    }
+    public static int oddSum(int[] myArr){
+        int sum = 0;
+        for(int i = 1; i < myArr.length; i+=2)
+        {
+            sum += myArr[i];
+        }    
+        return sum;
+    }
+    public static int evenSum(int[] myArr){
+        int sum = 0;
+        for(int i = 0; i < myArr.length; i+=2)
+        {
+            sum += myArr[i];
+        }    
+        return sum;
     }
    
 }
